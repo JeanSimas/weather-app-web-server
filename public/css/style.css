@@ -55,7 +55,7 @@ header a {
 
 .content {
     padding: 30px;
-    height: 600px;
+    height: 700px;
     width: 1140px;
     margin: 0 auto;
 }
@@ -63,12 +63,56 @@ header a {
 footer {
 
     background-color: #282828;
-    border-top: 1px solid #eee;
-    height: 100vh;
 }
 
 .footerContainer {
+
     width: 1140px;
     padding-top: 16px;
     margin: 0 auto;
+}
+
+
+
+.divLogo,
+.divDescription,
+.divMenu {
+    width: 380px;
+    float: left;
+    height: 300px;
+    border-right: 1px solid #aaa;
+
+
+
+
+}
+
+.divLogo {
+    border-left: 1px solid #aaa;
+}
+
+.divLogo div {
+
+    height: 60px;
+    position: relative;
+    top: 40%;
+    margin-left: 30px;
+}
+
+.divLogo img {
+    height: 60px;
+    width: auto;
+    float: left;
+
+}
+
+.divLogo p {
+    position: relative;
+    top: 30%;
+    left: 5%;
+}
+
+.divDescription p {
+    text-align: justify;
+    padding: 10px;
 }

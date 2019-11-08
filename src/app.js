@@ -30,7 +30,6 @@ app.get('/about', (request, response) => {
 })
 
 app.get('/help', (request, response) => {
-    console.log(request)
     response.render('help', {
         title: 'Help',
         message: 'This is a message to help you solve your problems',
