@@ -1,0 +1,1 @@
+document.write("<h2>Ta ligado meu parcero</h2>")
