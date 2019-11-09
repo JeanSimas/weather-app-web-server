@@ -3,6 +3,8 @@ const express = require('express')
 const hbs = require('hbs')
 const fs = require('fs')
 const app = express()
+const forecast = require('./utils/forecast')
+const geocode = require('./utils/geocode')
 
 const defaultPath = path.join(__dirname, '../public/')
 const viewsPath = path.join(__dirname, '../templates/views')
@@ -37,11 +39,44 @@ app.get('/help', (request, response) => {
     })
 })
 app.get('/weather', (request, response) => {
-    response.send({
-        location: 'Iguaba Grande',
-        forecast: 'Its 20 degress out there'
+    if (!request.query.address) {
+        return response.send({
+            error: 'You must provide a address.'
+        })
+    }
+    geocode(request.query.address, (error, geocodeData) => {
+        if (error) {
+            console.log(error)
+            response.send({
+                error
+            })
+        } else {
+            forecast(geocodeData.latitude, geocodeData.longitude, (error, forecastData) => {
+                if (error) {
+                    console.log(`Error : ${error}`)
+                } else {
+                    response.send({
+                        forecast: forecastData,
+                        location: geocodeData.location
+                    })
+                }
+            })
+        }
     })
+
 })
+
+app.get('/products', (request, response) => {
+    if (!request.query.search) {
+        return response.send({
+            error: 'You must provide a search term.'
+        })
+    }
+    console.log(request.query.search)
+    response.send({
+        products: []
+    })
+});
 
 app.get('/help/*', (request, response) => {
     response.render('404', {
