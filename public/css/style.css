@@ -181,3 +181,24 @@ footer {
     margin-top: 10px;
     border-top: 1px solid #aaa;
 }
+
+input {
+    font-size: 26px;
+    border-radius: 2px;
+    box-shadow: none;
+    border: 0;
+    height: 40px;
+}
+
+button {
+    height: 40px;
+    border: 0;
+    position: relative;
+    top: -4px;
+    left:-4px;
+}
+
+
+::-webkit-input-placeholder {
+    padding-left: 10px;
+}
