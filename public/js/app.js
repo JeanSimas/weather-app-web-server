@@ -12,6 +12,7 @@ showInformation = (location) => {
     fetch('http://localhost:3000/weather?address=' + location).then((response) => {
         response.json().then((parsedData) => {
             if (parsedData.error) {
+                messageOne.style.color = '#ff1010'
                 messageOne.textContent = 'Error'
                 messageTwo.textContent = parsedData.error
             } else {
