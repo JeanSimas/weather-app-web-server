@@ -41,7 +41,7 @@ app.get('/help', (request, response) => {
 app.get('/weather', (request, response) => {
     if (!request.query.address) {
         return response.send({
-            error: 'You must provide a address.'
+            error: 'You must provide an address.'
         })
     }
     geocode(request.query.address, (error, geocodeData) => {
