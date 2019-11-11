@@ -31,7 +31,9 @@ header {
 }
 
 header h1 {
+    color: #ffffff;
     margin-top: 10px;
+    text-shadow: 2px 2px 2px #aaaaaa;
 }
 
 header li {
@@ -43,6 +45,7 @@ header li {
     font-weight: 10;
     float: left;
     padding-left: 30px;
+    width: 600px;
 }
 
 .divNav {
@@ -61,6 +64,14 @@ header li {
 
 header a {
     text-decoration-line: none;
+}
+
+header img {
+    float: left;
+    height: 60px;
+    width: auto;
+    margin-top: 18px;
+    padding-right: 20px;
 }
 
 header a {
@@ -213,10 +224,12 @@ button {
 
 
 #message-one {
+    text-align: center;
     font-size: 60px;
 }
 
 #message-two {
+    padding-top: 15px;
     font-size: 24px;
     text-align: justify;
 }
