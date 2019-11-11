@@ -195,10 +195,28 @@ button {
     border: 0;
     position: relative;
     top: -4px;
-    left:-4px;
+    left: -4px;
 }
 
 
 ::-webkit-input-placeholder {
     padding-left: 10px;
+}
+
+.forecast-result {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#message-one {
+    font-size: 60px;
+}
+
+#message-two {
+    font-size: 24px;
+    text-align: justify;
 }
