@@ -193,25 +193,66 @@ footer {
     border-top: 1px solid #aaa;
 }
 
+form {
+    display: flex;
+    width: 700px;
+    align-items: center;
+    margin: 0 auto;
+}
+
 input {
+    margin-left: 10px;
     font-size: 26px;
+    width: 600px;
     border-radius: 2px;
     box-shadow: none;
     border: 0;
     height: 40px;
+    background-color: #121212;
+    outline: none;
+    color: #aaaaaa;
 }
 
 button {
     height: 40px;
     border: 0;
-    position: relative;
-    top: -4px;
-    left: -4px;
+    color: #aaa;
+    background-color: #393939;
+    width: 60px;
+    border-radius: 2px;
 }
 
+.container-input {
+    position: relative;
+    width: 610px;
+    align-items: center;
+    margin: 0 auto;
+    background-color: #121212;
+    float: left;
+    border-radius: 2px;
+}
+
+.div-input {
+    width: 670px;
+    margin: 0 auto;
+}
 
 ::-webkit-input-placeholder {
-    padding-left: 10px;
+    color: #505050;
+}
+
+.icon-search {
+    height: 25px;
+    width: auto;
+    color: #aaaaaa;
+}
+
+g {
+    color: red;
+}
+
+svg {
+    fill: #aaaaaa;
 }
 
 .forecast-result {
