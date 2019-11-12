@@ -9,7 +9,7 @@ showInformation = (location) => {
     messageOne.style.color = '#aaaaaa'
     messageOne.textContent = 'Loading Forecast'
     messageTwo.textContent = ''
-    fetch('http://localhost:3000/weather?address=' + location).then((response) => {
+    fetch('/weather?address=' + location).then((response) => {
         response.json().then((parsedData) => {
             if (parsedData.error) {
                 messageOne.style.color = '#ff1010'
